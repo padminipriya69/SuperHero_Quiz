@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Kenia&family=Pacifico&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.bg{
+    background-image: url("./images/bg2.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.c1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.c1 h1{
+    font-family: 'Kenia', cursive;
+    color: #D2001A;
+    font-size: 100px;
+    /* background-color: #FFF5E4;
+    border-radius: 10px;
+    margin-bottom: 5px; */
+}
+.c1 p{
+    /* color: rgb(29, 164, 226); */
+    font-size: 50px;
+    font-weight: 500;
+    font-family: 'Pacifico', cursive;
+    background: -webkit-linear-gradient(rgb(5, 47, 163), rgb(86, 243, 217));
+    -webkit-background-clip: text;
+    background-clip: 0;
+    -webkit-text-fill-color: transparent;
+    /* background-color: white;
+    border-radius: 5px; */
+}
+.c1 .hrline1{
+    width: 600px;
+    height: 3px;
+    margin: 3px;
+    background-color: bisque;
+}
+.c2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.c2 .card1{
+    width: 250px;
+    height: 300px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+.c2 .card1 img{
+    width: 90%;
+    object-fit: cover;
+}
+.c2 .marv:hover{
+    cursor: pointer;
+    box-shadow: 3px 3px 10px 5px rgb(230, 12, 12);
+    transform: scale(1.1,1.1);
+    transition: 0.5s;
+}
+.c2 .dc:hover{
+    cursor: pointer;
+    box-shadow: 3px 3px 10px 5px rgb(12, 132, 230);
+    transform: scale(1.1,1.1);
+    transition: 0.5s;
+}
