@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUPERHERO QUIZ</title>
+    <Link rel="stylesheet" href="./scorestyle.css">
+</head>
+
+<body class="bg">
+    <div class="c1">
+        <h1>THE SUPERHERO QUIZ</h1>
+        <!-- <div class="container"> -->
+            <div class="circular-progress">
+              <div class="value-container">0%</div>
+            </div>
+          <!-- </div> -->
+        <p>Your Score is 0/0</p>
+        <button onclick="quitquiz()">Quit</button>
+    </div>
+</body>
+
+<script>
+    const quitquiz = () => {
+        localStorage.clear();
+        window.location.href = "index.html";
+    }
+    //console.log(localStorage.getItem("score"));
+    let progressBar = document.querySelector(".circular-progress");
+    let valueContainer = document.querySelector(".value-container");
+
+     console.log(progressBar);
+    // console.log(valueContainer);
+
+    let progressValue = 0;
+    var progressEndValue =localStorage.getItem("scorepercent");
+    let speed = 20;
+
+    let progress = setInterval(() => {
+    progressValue++;
+    valueContainer.textContent = `${progressValue}%`;
+    progressBar.style.background = 
+    `conic-gradient(#00FFD1 ${progressValue * 3.6}deg,
+        #ffff ${progressValue * 3.6}deg)`
+    ;
+    progressBar.classList.add("stylebar");
+    if (progressValue == progressEndValue) {
+        clearInterval(progress);
+    }
+    }, speed);
+    document.querySelector("p").innerHTML = "Your Score is " + localStorage.getItem("finalscore");
+</script>
+
+</html>

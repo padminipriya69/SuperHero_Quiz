@@ -1,0 +1,109 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kenia&family=Pacifico&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.bg{
+    background-image: url("./images/bg2.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.c1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50vh;
+}
+.c1 h1{
+    margin-top: 30vh;
+    font-family: 'Kenia', cursive;
+    background: -webkit-linear-gradient(#079fce,#D2001A);
+    -webkit-background-clip: text;
+    background-clip: 0;
+    -webkit-text-fill-color: transparent;
+    font-size: 100px;
+    /* background-color: #FFF5E4;
+    border-radius: 10px;
+    margin-bottom: 5px; */
+}
+.c1 p{
+    background-color: goldenrod;
+    box-shadow: 0 0 5px 5px inset rgb(163, 6, 6);
+    font-size: 25px;
+    color: rgb(163, 6, 6);
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 15px;
+    border-radius: 50px;
+    margin-top: 20px;
+ }
+ 
+ .c1 button{
+    background-color: white;
+    box-shadow: 0 0 10px 5px  rgb(41, 187, 245);
+    font-size: 25px;
+    color: black;
+    padding: 0 10px;
+    border-radius: 20px;
+    margin: 20px;
+    border: 1px solid white;
+    cursor: pointer;
+ }
+ 
+ .c1 button:hover{
+     background-color: rgb(41, 187, 245);
+     box-shadow: 0 0 5px 5px  white;
+     color: black;
+ }
+/*-------------------------------------*/
+ .container {
+    height: 150px;
+    width: 150px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 20px 20px 40px rgba(60, 60, 150, 0.25);
+    /* transform: translate(-50%, -50%);*/
+    /* position: absolute;
+    top: 30%;
+    left: 40%; */
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    /*
+    display: grid;
+    place-items: center; 
+    these two seems like replacement for above 3
+    */
+  }
+  .circular-progress {
+    /* background-color: black; */
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 0 10px 2px inset silver;
+  }
+  .circular-progress:before {
+    content: "";
+    position: absolute;
+    height: 75%;
+    width: 75%;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 3px inset silver;
+  }
+   .value-container {
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    color: #231c3d;
+    font-weight: 600;
+  } 

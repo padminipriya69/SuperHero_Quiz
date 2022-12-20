@@ -1,0 +1,44 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SUPERHERO QUIZ</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+
+    <script>
+        /*function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }*/
+        //This is an arrow function and it its very similar to normal function in JS
+        const openquiz = (quizname) => { 
+            localStorage.clear();
+            localStorage.setItem("quizType", quizname);
+            localStorage.setItem("questionNum",1);
+            localStorage.setItem("score",0);
+            window.location.href = "index1.html";
+        }
+    </script>
+
+    <body class="bg">
+        <div class="c1">
+            <h1> THE SUPERHERO QUIZ </h1>
+            <div class="hrline1"></div>
+            <p> Choose a card to start</p>
+            <div class="hrline1"></div>
+        </div>
+
+        <div class="c2">
+            <div class="card1 marv" onclick="openquiz('marvel')">
+                <img class="mar" src="./images/Marvel_Logo.png" alt="marvel">
+            </div>
+            <div class="card1 dc" onclick="openquiz('dc')">
+                <img src="./images/dc_logo.png" alt="DC">
+            </div>
+        </div>
+    </body>
+</html>
